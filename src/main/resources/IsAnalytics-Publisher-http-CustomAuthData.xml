@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventPublisher
+  name="Http-IsAnalytics-Publisher-CustomAuthData"
+  statistics="disable" trace="disable" xmlns="http://wso2.org/carbon/eventpublisher">
+  <from streamName="org.wso2.is.analytics.stream.CustomAuthData" version="1.0.0"/>
+  <mapping customMapping="enable" type="json">
+     <inline>{
+      "api_key": {{apiKey}},
+      "events": {
+      "event_type": {{eventType}},
+      "event_properties": {
+          "Type": {{type}}
+      },
+      "user_properties" : {
+      		"username": {{username}},
+          "application": {{application}}
+      }
+    }
+    </inline> 
+  </mapping>  
+  <to eventAdapterType="http">
+    <property name="http.client.method">HttpPost</property>
+    <property name="publishingMode">non-blocking</property>
+    <property name="http.url">http://webhook.site/f700d195-a959-4eb4-8812-6fc5f55a9f28</property>
+  </to>
+</eventPublisher>
