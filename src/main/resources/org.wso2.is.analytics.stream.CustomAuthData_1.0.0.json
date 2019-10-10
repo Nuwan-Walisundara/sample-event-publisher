@@ -19,15 +19,27 @@
       "type": "STRING"
     },
     {
+      "name": "authenticationSuccess",
+      "type": "STRING"
+    },
+    {
       "name": "username",
       "type": "STRING"
     },
     {
-      "name": "type",
+      "name": "userStoreDomain",
       "type": "STRING"
     },
     {
-      "name": "application",
+      "name": "tenantDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "serviceProvider",
+      "type": "STRING"
+    },
+    {
+      "name": "identityProvider",
       "type": "STRING"
     }
   ]

@@ -92,13 +92,18 @@
         </dependency>
         <dependency>
             <groupId>org.wso2.carbon.identity.datapublisher.authentication</groupId>
-            <artifactId>org.wso2.carbon.identity.data.publisher.application.authentication</artifactId>
+            <artifactId>org.wso2.carbon.identity.data.publisher.authentication.analytics.login</artifactId>
             <version>${identity.datapublisher.authentication.version}</version>
         </dependency>
         <dependency>
             <groupId>org.wso2.orbit.org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>${httpcomponents-httpclient.wso2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.framework</groupId>
+            <artifactId>org.wso2.carbon.identity.event</artifactId>
+            <version>${identity.framework.version}</version>
         </dependency>
     </dependencies>
 
@@ -152,10 +157,9 @@
         </plugins>
     </build>
     <properties>
-        <identity.framework.version>5.12.153</identity.framework.version>
-        <carbon.kernel.version>4.4.35</carbon.kernel.version>
-        <commons-logging.version>4.2.0</commons-logging.version>
-        <identity.datapublisher.authentication.version>5.1.8</identity.datapublisher.authentication.version>
+        <identity.framework.version>5.12.387</identity.framework.version>
+        <carbon.kernel.version>4.4.40</carbon.kernel.version>
+        <identity.datapublisher.authentication.version>5.1.12</identity.datapublisher.authentication.version>
         <maven.scr.plugin.version>1.24.0</maven.scr.plugin.version>
         <maven.bundle.plugin.version>2.4.0</maven.bundle.plugin.version>
         <maven.compiler.plugin.version>2.3.1</maven.compiler.plugin.version>

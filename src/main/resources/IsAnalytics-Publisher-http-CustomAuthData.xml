@@ -3,21 +3,7 @@
   name="Http-IsAnalytics-Publisher-CustomAuthData"
   statistics="disable" trace="disable" xmlns="http://wso2.org/carbon/eventpublisher">
   <from streamName="org.wso2.is.analytics.stream.CustomAuthData" version="1.0.0"/>
-  <mapping customMapping="enable" type="json">
-     <inline>{
-      "api_key": {{apiKey}},
-      "events": {
-      "event_type": {{eventType}},
-      "event_properties": {
-          "Type": {{type}}
-      },
-      "user_properties" : {
-      		"username": {{username}},
-          "application": {{application}}
-      }
-    }
-    </inline> 
-  </mapping>  
+  <mapping customMapping="disable" type="json" />
   <to eventAdapterType="http">
     <property name="http.client.method">HttpPost</property>
     <property name="publishingMode">non-blocking</property>

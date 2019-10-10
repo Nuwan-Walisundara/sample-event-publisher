@@ -27,7 +27,7 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 import org.wso2.carbon.event.stream.core.EventStreamService;
-import org.wso2.carbon.identity.application.authentication.framework.AuthenticationDataPublisher;
+import org.wso2.carbon.identity.event.handler.AbstractEventHandler;
 import org.wso2.event.publisher.sample.SampleEventPublisher;
 
 /**
@@ -47,7 +47,7 @@ public class SampleEventPublisherServiceComponent {
             log.debug("Activating SampleEventPublisherServiceComponent");
         }
         try {
-            context.getBundleContext().registerService(AuthenticationDataPublisher.class.getName(),
+            context.getBundleContext().registerService(AbstractEventHandler.class.getName(),
                     new SampleEventPublisher(), null);
             if (log.isDebugEnabled()) {
                 log.debug("SampleEventPublisherServiceComponent is activated");
